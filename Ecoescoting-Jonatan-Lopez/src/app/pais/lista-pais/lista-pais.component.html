@@ -1,0 +1,33 @@
+<div class="container">
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Bandera</th>
+        <th scope="col">Pais</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Region</th>
+        <th scope="col">Lengua</th>
+        <th scope="col">Poblacion</th>
+        <th scope="col">Sub Regiones</th>
+        <th scope="col">Tipo de Moneda</th>
+        <th scope="col">Zona Horaria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pais of paises">
+        <td class="col-md-2">
+           <a routerLink="/detalle/{{pais.id}}"> <img [src]="pais.Bandera_Pais" alt="" class="card-img" /></a>
+        </td>
+        <td>{{pais.Nombre_Pais}}</td>
+        <td>{{pais.Capital_Pais}}</td>
+        <td>{{pais.Region_Pais}}</td>
+        <td>{{pais.Lengua_Pais}}</td>
+        <td>{{pais.Poblacion_Pais}}</td>
+        <td>{{pais.SubReg_Pais}}</td>
+        <td>{{pais.TipoMoneda_Pais}}</td>
+        <td>{{pais.Zona_Horaria}}</td>
+        <td><button class="btn btn-outline-primary" routerLink="/detalle/{{pais.id}}"><i class="far fa-eye"></i> Ver</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

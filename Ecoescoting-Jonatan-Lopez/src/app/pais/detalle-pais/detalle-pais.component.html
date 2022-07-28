@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row mt-5" *ngIf="pais">
+    <div class="col-md-4 mx-auto">
+      <div class="card" style="width: 18rem">
+        <div class="card-header text-center">Detalle</div>
+        <ul class="list-group list-group-flush">
+          <li class="cold-md-2" ><img [src]="pais.Bandera_Pais" class="card-img"/></li>
+          <li class="list-group-item"><b>Pais:</b>{{ pais.Nombre_Pais }}</li>
+          <li class="list-group-item">
+            <b>Capital: </b>{{ pais.Capital_Pais }}
+          </li>
+          <li class="list-group-item"><b>Region: </b>{{ pais.Region_Pais }}</li>
+
+          <li class="list-group-item"><b>Lengua: </b>{{ pais.Lengua_Pais }}</li>
+
+          <li class="list-group-item">
+            <b>Poblacion: </b>{{ pais.Poblacion_Pais }}
+          </li>
+
+          <li class="list-group-item">
+            <b>Sub Regiones: </b>{{ pais.SubReg_Pais }}
+          </li>
+
+          <li class="list-group-item">
+            <b>Tipo de Moneda: </b>{{ pais.TipoMoneda_Pais }}
+          </li>
+          <li class="list-group-item">
+            <b>Zona Horaria: </b>{{ pais.Zona_Horaria }}
+          </li>
+        </ul>
+        <div class="card-footer">
+          <button class="btn btn-outline-primary btn-block" (click)="volver()">
+            <i class="fas fa-arrow-alt-circle-left"></i> Volver
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
